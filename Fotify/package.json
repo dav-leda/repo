@@ -1,0 +1,15 @@
+{
+  "name": "fotify",
+  "version": "1.0.0",
+  "description": "buscador de fotos",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "photo",
+    "search"
+  ],
+  "author": "David Leda",
+  "license": "ISC"
+}

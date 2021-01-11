@@ -1,0 +1,230 @@
+
+
+body, html {
+  margin: 0;
+  background-image: url("fondo/foto-fondo.jpg");
+  height: 100%;
+  background-position: center;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#fondo:-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-brand{
+    font-family: 'Comfortaa' !important;
+    font-size: 18px !important;
+    
+}
+
+.nav-link{
+    font-family: 'Comfortaa' !important;
+    font-size: 16px;
+    
+}
+
+
+.center { 
+   
+    height: auto;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+
+.div1 {
+
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    height: auto;
+    top: 150px;
+    padding: 10px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: fit-content;
+    max-width: 400px;
+    text-align: center;
+}
+
+
+.titulo {
+  font-family: 'Comfortaa';
+  padding: 10px;
+  color: #d3d3d3;
+  font-size: 18px;
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.titulo2 {
+    font-family: 'Comfortaa';
+    padding: 10px;
+    color: #d3d3d3;
+    font-size: 30px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    white-space: pre;
+}
+
+.texto {
+    font-family: 'Quicksand';
+    padding: 10px;
+    color: #d3d3d3;
+    font-size: 16px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+   
+}
+
+
+.navbar-toggler-icon{
+    font-size: 0.8em; 
+}
+
+.navbar-toggler{
+    padding: 2% !important;
+  
+}
+
+
+span {
+  font: 10px Comfortaa, sans-serif;
+  line-height: 1.8;
+  color: #EEEEEE;
+  text-align: center
+}
+
+h3 {
+  font-family: 'Comfortaa';
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.link {
+  font-family: 'Comfortaa';
+  color: cyan;
+  font-size: 10px;
+  padding: 10px;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+    
+}
+
+
+.imagen {
+  width: 80%;
+  max-width: 400px;
+  height: 80%;
+  margin: auto;
+  
+}
+
+
+.botonV {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid #444444;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+
+  /* Los botones deben estar centrados pero sin pegarse.
+  Para eso hay que poner auto solo para margin left y right.
+  Y el width proporcional al texto, no al ancho del div.
+  */
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+
+}
+
+.botonH {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid #444444;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px; 
+  display: inline;
+}
+
+.botonSiNo {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid #444444;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px; 
+  width: 60px;
+}
+
+
+.map {
+    
+  border-radius: 10px;
+  padding: 10px;
+  height: 400px;
+  width: auto;
+  max-height: 400px;
+  max-width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
+  
+}
+
+.divEspacio {margin: 15px; padding: 15px}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  
+  height: 60px;
+  animation: spin 2s linear infinite;
+  
+  margin: auto;
+  width: 60px;
+  padding: 10px;
+}
+  
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+
+

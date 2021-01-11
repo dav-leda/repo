@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotify</title>
+
+    <!-- ICONS -->
+    <meta property="og:title" content="Fotify" />
+    <meta property="og:description" content="Fotify facilita la búsqueda de imágenes y muestra una selección de fotos de alta calidad tomadas por fotógrafos profesionales y libres de copyright!" />
+    <meta property="og:image" content="https://fotify.web.app/src/images/-fotify.png" />
+    <link rel="icon" type="image/png" href="./src/images/-fotify.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="128x128" href="./src/images/-fotify.png">
+
+   <!--  JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Dependiendo del tamaño de la pantalla uso un archivo de CSS o el otro: -->
+    <link rel="stylesheet" media="screen and (min-width: 501px)" href="src/css/styles-wide.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="src/css/styles-small.css">
+
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Gotu' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f5af006e8f.js" crossorigin="anonymous"></script>
+
+    <!-- LIBRARIES -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="415674913031-sf56qri25s5brdmc1pu6vj2qmqji6rpa.apps.googleusercontent.com">
+    
+
+    
+    
+</head>
+
+<body onload="crearHeader()">
+
+  <div id='root' class='root'></div>
+
+  <div id='container' class='container'></div>
+
+  <div id="ventanaModal" class="modal"></div>
+
+    
+  
+<!-- FIREBASE -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCulSPdI1TmrNSMNaaItnoqMQ9QQv-gdCc",
+    authDomain: "fotify.firebaseapp.com",
+    databaseURL: "https://fotify.firebaseio.com",
+    projectId: "fotify",
+    storageBucket: "fotify.appspot.com",
+    messagingSenderId: "415674913031",
+    appId: "1:415674913031:web:64895ffddeb9a86db5f5a2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<script src="src/js/main.js"></script>
+
+
+</body>
+
+</html>
