@@ -22,8 +22,8 @@ const port = 8000
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-const accountSid = 'ACbdb9ba6f84018f6f00a833996c48dcb5';
-const authToken = 'e705fe05fe2a2714ad3a8ec0f656ab26';
+const accountSid = 'xxxxxxxxx';
+const authToken = 'xxxxxxxxxxx';
 const client = require('twilio')(accountSid, authToken);
 const shell = require('shelljs');
 
@@ -47,15 +47,15 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'panlibros2@gmail.com',
-        pass: 'libapps2576'
+        user: 'xxxxxxxx',
+        pass: 'xxxxxxx'
     }
 });
 
 let info = await transporter.sendMail({
 
     from: 'dav´s robot 🤖 <quantacat.app@gmail.com>', // sender address
-    to: 'lluvia.y.siesta@gmail.com, patriciasalazarcaceres@gmail.com', // list of receivers
+    to: 'patriciasalazarcaceres@gmail.com', // list of receivers
     subject: 'Chequeo Locales TOSTADO', // Subject line
     html: `<p style="font-size: 16px;"> Chequeo Locales TOSTADO: </p><br><br>${el_html}`
 });
@@ -505,7 +505,7 @@ const nueva_fila = (la_app, sucursal, respuesta, time, url) => `
 */
 
 const dav = '65917710';
-const lau = '53869422';
+const lau = 'xxxxxxxx';
 const msg_830 = 'Buen día, Lau! Soy el robot de Dav 🤖. Te acabo de enviar un nuevo mail con el estado de los locales 📩';
 const msg_1600 = 'Hola Lau 🤖 Te acabo de enviar un nuevo mail 📩';
 
@@ -516,7 +516,7 @@ const enviar_wpp = async (numero, mensaje) => {
     let number = 'whatsapp:+54911' + numero;
     
       client.messages.create ( {
-              from: 'whatsapp:+14155238886',
+              from: 'whatsapp:+xxxxxxxxx',
               body: mensaje,
               to: number
       }).then(message => console.log(message.sid)
