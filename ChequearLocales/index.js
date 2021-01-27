@@ -22,8 +22,8 @@ const port = 8000
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-const accountSid = 'xxxxxxxxx';
-const authToken = 'xxxxxxxxxxx';
+const accountSid = 'xxxxxxxxxxxxxxx';
+const authToken = 'xxxxxxxxxxxxxx';
 const client = require('twilio')(accountSid, authToken);
 const shell = require('shelljs');
 
@@ -504,8 +504,8 @@ const nueva_fila = (la_app, sucursal, respuesta, time, url) => `
                                                 |_|                                           
 */
 
-const dav = '65917710';
-const lau = 'xxxxxxxx';
+const dav = 'xxxxxxx';
+const lau = 'xxxxxxx';
 const msg_830 = 'Buen día, Lau! Soy el robot de Dav 🤖. Te acabo de enviar un nuevo mail con el estado de los locales 📩';
 const msg_1600 = 'Hola Lau 🤖 Te acabo de enviar un nuevo mail 📩';
 
@@ -534,11 +534,9 @@ const start = async (wpp1, msg1, wpp2, msg2) => {
    
 }
 
-// start(dav, msg_830, lau, msg_830)
 
 start(dav, msg_1600, lau, msg_1600)
 
-// start(dav, msg_1600)
 
 /*
                                                _                  _           _
