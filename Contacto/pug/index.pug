@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    
+    meta(charset='utf-8')
+    title Página de contacto
+    meta(name='description' content='contacto')
+    meta(name='author' content='David Leda')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    
+    link(href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css')
+    
+    link(rel='stylesheet' href='./css/normalize.css')
+    link(rel='stylesheet' href='./css/skeleton.css')
+  
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+  
+  body
+    .container
+      br
+      h2 Contacto
+      br
+      form
+        .row
+          .six.columns
+            label(for='exampleEmailInput') Tu email:
+            input#exampleEmailInput.u-full-width(type='email' placeholder='email@mail.com')
+          
+        label(for='exampleMessage') Tu mensaje:
+        textarea#exampleMessage.u-full-width(placeholder='Hola...') 
+        input.button-primary(type='submit' value='Enviar')
