@@ -10,20 +10,19 @@
 
 */
 
+require('dotenv').config();
 const ver = (que_ver) => console.log(`%c\n ${que_ver} `,`color: navy; background-color: beige`);
-const esperar = async (segundos) => new Promise(res => setTimeout(res, segundos * 1000));
 const puppeteer = require('puppeteer');
 const Galaxy = puppeteer.devices['Galaxy S5'];
 const cron = require('node-cron');
 const nodemailer = require('nodemailer');
-const express = require('express')
-const app = express()
-const port = 8000
+const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-const accountSid = 'xxxxxxxxxxxxxxx';
-const authToken = 'xxxxxxxxxxxxxx';
+const accountSid = process.env.TWILIO_ACCOUNTS_ID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 const shell = require('shelljs');
 
@@ -47,8 +46,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'xxxxxxxx',
-        pass: 'xxxxxxx'
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS
     }
 });
 
