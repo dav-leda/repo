@@ -4,26 +4,42 @@
     <meta charset="utf-8">
     <title>Página de contacto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/skeleton.css">
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./enviar.js"></script>
+
   </head>
+
   <body>
     <div class="container"><br>
       <h2>Contacto</h2><br>
-      <form>
+
+      <form id="formulario">
         <div class="row">
           <div class="six columns">
             <label for="el_mail">Tu email:</label>
-            <input class="u-full-width" id="el_mail" type="email" placeholder="email@mail.com">
+            <input class="u-full-width" id="el_mail" type="email" placeholder="email@mail.com" required>
           </div>
         </div>
         <label for="el_mensaje">Tu mensaje:</label>
-        <textarea class="u-full-width" id="el_mensaje" placeholder="Hola..."></textarea>
-        <button class="button-primary" onclick="enviar_mail()"> Enviar</button>
+        <textarea class="u-full-width" id="el_mensaje" placeholder="Hola..." required></textarea>
+        <button class="button-primary" id="enviar">Enviar</button>
       </form>
+
+      <div class="hidden" id="mensaje">
+
+        <h5>Tu mail fue enviado. <br> Te responderemos a la brevedad.</h5><br>
+
+        <button class="button-primary" id="volver">Volver</button>
+
+      </div>
+
     </div>
+
+    <script src="./enviar.js"></script>
   </body>
 </html>
