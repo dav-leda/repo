@@ -18,6 +18,7 @@ const cron = require('node-cron');
 const nodemailer = require('nodemailer');
 const express = require('express');
 const app = express();
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -54,7 +55,7 @@ const transporter = nodemailer.createTransport({
 let info = await transporter.sendMail({
 
     from: 'dav´s robot 🤖 <quantacat.app@gmail.com>', // sender address
-    to: 'patriciasalazarcaceres@gmail.com', // list of receivers
+    to: 'lluvia.y.siesta@gmail.com', // list of receivers
     subject: 'Chequeo Locales TOSTADO', // Subject line
     html: `<p style="font-size: 16px;"> Chequeo Locales TOSTADO: </p><br><br>${el_html}`
 });
@@ -77,7 +78,7 @@ console.log("Message sent: %s", info.messageId);
 
 const Locales = {
 
-    Rappi: {
+    /* Rappi: {
 
         Av_Cordoba: {
             url: '113952-tostado-cafe-club-buenos-aires-buenos-aires',
@@ -109,7 +110,7 @@ const Locales = {
         Nuñez: {
             url: '113924-tostado-cafe-club-buenos-aires-buenos-aires',
             direccion: 'Nuñez'},
-    },
+    }, */
 
     PedidosYa: {
 
@@ -125,7 +126,7 @@ const Locales = {
         Av_Cordoba_Café: {
             url: '--cordoba',
             direccion: 'Av Cordoba 1501'},
-        Belgrano: {
+        /* Belgrano: {
             url: 'club-juramento',
             direccion: 'Juramento 2103'},
         Belgrano_Café: {
@@ -175,7 +176,7 @@ const Locales = {
             direccion: ''},
         Canning_Café: {
             url: '--canning',
-            direccion: ''}
+            direccion: ''} */
     }
 }
 
@@ -236,7 +237,7 @@ const chequear_local = async (url, la_app, local, direccion, carpeta, time) => {
 
         ver ( `${la_app}: el local Tostado ${local} se encuentra ${respuesta}.` );
 
-        await page.emulate(Galaxy);
+        /* await page.emulate(Galaxy);
 
         let el_path = `${carpeta}/screenshot_${la_app}_${local}_${time}.jpg`;
 
@@ -244,7 +245,7 @@ const chequear_local = async (url, la_app, local, direccion, carpeta, time) => {
             path: el_path,
             type: 'jpeg',
             fullPage: false
-        });
+        }); */
 
         await browser.close();
 
@@ -503,11 +504,11 @@ const nueva_fila = (la_app, sucursal, respuesta, time, url) => `
                                                 |_|                                           
 */
 
-const dav = 'xxxxxxx';
-const lau = 'xxxxxxx';
-const msg_830 = 'Buen día, Lau! Soy el robot de Dav 🤖. Te acabo de enviar un nuevo mail con el estado de los locales 📩';
-const msg_1600 = 'Hola Lau 🤖 Te acabo de enviar un nuevo mail 📩';
+const wpp_dav = process.env.DAV_WPP;
 
+const msg_1600 = 'Hola 🤖 Te acabo de enviar un nuevo mail 📩';
+
+const wpp_twilio = process.env.TWILIO_WPP;
 
 
 const enviar_wpp = async (numero, mensaje) => {
@@ -515,26 +516,26 @@ const enviar_wpp = async (numero, mensaje) => {
     let number = 'whatsapp:+54911' + numero;
     
       client.messages.create ( {
-              from: 'whatsapp:+xxxxxxxxx',
+              from: 'whatsapp:+' + wpp_twilio,
               body: mensaje,
               to: number
       }).then(message => console.log(message.sid)
 )}
 
 
-const start = async (wpp1, msg1, wpp2, msg2) => {
+const start = async (wpp1, msg1) => {
 
     let respuesta_html = await iniciar_puppeteer();
 
     await mail(respuesta_html);
 
     await enviar_wpp(wpp1, msg1);
-    await enviar_wpp(wpp2, msg2)
+    
    
 }
 
 
-start(dav, msg_1600, lau, msg_1600)
+start(wpp_dav, msg_1600)
 
 
 /*
@@ -553,7 +554,7 @@ const Horarios = [
     '21 17 * * *', '44 15 * * *', '44 15 * * *', '44 15 * * *', '44 15 * * *'
 ]
 
-cron.schedule('30 08 * * *', () => { start() } , {
+/* cron.schedule('30 08 * * *', () => { start() } , {
    scheduled: true,
    timezone: "America/Sao_Paulo"
 });
@@ -566,7 +567,7 @@ cron.schedule('40 9 * * *', () => { start() } , {
 cron.schedule('5 12 * * *', () => { start() } , {
      scheduled: true,
      timezone: "America/Sao_Paulo"
-});
+}); */
 
 
 
@@ -582,7 +583,7 @@ cron.schedule('5 12 * * *', () => { start() } , {
 
 */
 
-
+/* 
 function crear_carpeta(fullpath) {
     let destination_split = fullpath.replace('/', '\\').split('\\')
     let path_builder = destination_split[0]
@@ -593,4 +594,4 @@ function crear_carpeta(fullpath) {
         fs.mkdirSync(path_builder)
       }
     })
-}
+} */
