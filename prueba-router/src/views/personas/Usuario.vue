@@ -1,12 +1,16 @@
 <template lang="pug">
 
 .contenedor(v-if="persona")
-    p Usuario: {{ persona.username }}
-    p Nombre: {{ persona.name }}
-    p e-mail: {{ persona.email }}
+    .usuario
+        h3 Usuario: 
+            span {{ persona.username }}
+        h3 Nombre: 
+            span {{ persona.name }}
+        h3 e-mail: 
+            span {{ persona.email }}
 
 div(v-else)
-    h3 Cargando datos...
+    h4 Cargando datos...
 
 </template>
 
@@ -18,6 +22,7 @@ export default {
 
     data() {
         return {
+            
             persona: null
         }
     },
@@ -45,3 +50,16 @@ export default {
 </script>
 
 
+
+<style lang="stylus">
+
+.usuario h3
+    color brown
+    padding-left 30px
+    
+span 
+    color black
+    
+h4 
+    text-align center
+</style>

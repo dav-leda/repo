@@ -31,6 +31,9 @@ export default {
 
 <style lang="stylus">
 
+body 
+  background snow
+
 #app 
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
@@ -48,18 +51,19 @@ export default {
 #nav a 
   font-size 30px
   color: black
-  background: lightgrey
+  background: tan
   text-decoration: none /* sin subrayado */
   padding: 10px 20px
   border-radius: 10px
-  border: 1px solid black
+  transition: 0.3s
   margin: 16px
   
-
+#nav a:hover  
+  background: wheat
 
 #nav a.router-link-exact-active 
   color: black
-  background: whitesmoke
+  background: papayawhip
 
 
 #router 

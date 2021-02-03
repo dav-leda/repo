@@ -4,12 +4,12 @@
   h1 Contacto
   label Tu e-mail:
   br
-  input(type='email' v-model="email")
+  input(type='email' v-model="email" required)
   br
   br
   label Mensaje:
   br
-  textarea(cols='24' rows='10')
+  textarea(cols='24' rows='10' required)
   br
   br
   button ENVIAR
@@ -28,13 +28,14 @@ input
   margin 10px
   font-size: 20px
   width: 80%
-  
+  background snow
 
 
 textarea 
   font-size: 20px
   width 80%
   margin 10px
+  background snow
 
 button 
   font-size: 12px

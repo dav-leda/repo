@@ -44,18 +44,19 @@ export default {
   text-align center
   position flex
   font-size: 14px
-  color: black
-  background: lightgrey
+  color: white
+  background: tan
   text-decoration: none /* sin subrayado */
   padding: 10px 10px
   border-radius: 10px
-  border: 1px solid black
+  transition: 0.3s
   margin-left: 20%
   width: 200px
   display: inline-block /* para que el div tenga el mismo 
   tamaño que el texto, o lo que indique el width */
 
 .usuarios h4:hover 
-    background whitesmoke
+    background wheat
+    color grey
 
 </style>

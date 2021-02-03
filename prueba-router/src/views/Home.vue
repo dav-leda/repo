@@ -11,12 +11,13 @@
 <style lang="stylus">
 
 .contenedor 
-  border 1px solid black
+  
   border-radius 10px
   width 360px
   height auto
   margin 30px auto
-  padding 0px 20px
+  padding 20px 20px
+  background papayawhip
   
 
 .contenedor p
