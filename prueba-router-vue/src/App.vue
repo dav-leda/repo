@@ -4,15 +4,12 @@
 
 #nav
   #router
-    button#back(@click='back') ⏪
-    button#forward(@click='forward') ⏩
-
   router-link(to="/") 🙋🏻‍♂️
   router-link(to="/usuarios") 👥
+  router-link(to="/posts") 📖
   router-link(to="/contacto") 📩
   router-link(to="/about") 💁🏻‍♂️
-
-
+  
 router-view
 
 </template>
@@ -38,7 +35,6 @@ body
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  
   color: #2c3e50
 
 
@@ -48,7 +44,8 @@ body
   margin-top 80px
   position relative
  
-#nav a 
+#nav a
+  
   font-size 30px
   color: black
   background: tan
@@ -68,9 +65,7 @@ body
 
 #router 
   text-align center
-  
   background transparent
-  
   
 
 #router button

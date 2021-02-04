@@ -20,9 +20,9 @@
 
 export default {
     data() {
-    return {
-        personas: []
-    }
+        return {
+            personas: []
+        }
     },
     mounted() {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -50,7 +50,7 @@ export default {
   padding: 10px 10px
   border-radius: 10px
   transition: 0.3s
-  margin-left: 20%
+  margin-left: 26%
   width: 200px
   display: inline-block /* para que el div tenga el mismo 
   tamaño que el texto, o lo que indique el width */

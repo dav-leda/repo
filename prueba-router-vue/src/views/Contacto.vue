@@ -21,11 +21,11 @@
 
 label 
   font-size: 16px
-  margin 10px
+  margin 0 40px
 
 
 input
-  margin 10px
+  margin 0 40px
   font-size: 20px
   width: 80%
   background snow
@@ -34,13 +34,15 @@ input
 textarea 
   font-size: 20px
   width 80%
-  margin 10px
+  margin 0 40px
   background snow
 
 button 
   font-size: 12px
   padding: 10px 20px  
-  margin 1px 10px 40px 10px
+  margin 1px 40px 40px 40px
   font-weight bold
+  
+
 
 </style>

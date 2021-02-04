@@ -13,8 +13,9 @@
 .contenedor 
   
   border-radius 10px
-  width 360px
+  width 450px
   height auto
+  min-height 400px
   margin 30px auto
   padding 20px 20px
   background papayawhip
@@ -24,7 +25,7 @@
   text-align justify
   font-size 16px
   padding 0 40px
-  margin-bottom 50px
+  margin-bottom 10px
 
 .contenedor h1 
   text-decoration: underline
