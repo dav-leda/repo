@@ -3,7 +3,7 @@
 <template lang="pug">
 
 .post(v-if="numero_de_posts") 
-    router-link(:to="{ name: 'details', params: { id: post.id } }") 
+    router-link(:to="{ name: 'un_post', params: { id: post.id } }") 
     
         h3 {{ titulo_corto }}
     h4 {{ texto_corto }}

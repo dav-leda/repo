@@ -13,9 +13,8 @@ div(v-else)
 
 <script>
 
-import PostList from '../components/PostList.vue'
-import getPosts from '../funciones/getPosts'
-
+import PostList from '../../components/PostList'
+import getPosts from '../../funciones/getPosts'
 
 export default {
     props: ['id'],
@@ -25,18 +24,10 @@ export default {
     setup() {
 
         const { posts, load } = getPosts()
-
         load()
-        
-        return { posts }
-        
-    }
 
+        return { posts }   
+    }
 }
 </script>
 
-<style lang="stylus">
-
-
-
-</style>

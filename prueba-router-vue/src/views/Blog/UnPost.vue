@@ -2,26 +2,24 @@
 <template lang="pug">
 
 .contenedor
-    .post(v-if="post")
-        h3 {{ post.title }}
-        p {{ post.body }}
+    .post(v-if="posts")
+        h3 {{ posts.title }}
+        p {{ posts.body }}
 
 </template>
 
 <script>
-import getPost from "../funciones/getPost";
+
+import getPosts from "../../funciones/getPosts";
 
 export default {
     props: ['id'],
 
     setup(props) {
 
-        const { post, load } = getPost(props.id)
-
+        const { posts, load } = getPosts(props.id)
         load()
-
-        return { post }
-        
+        return { posts }
     }
 }
 </script>
@@ -39,5 +37,4 @@ export default {
     max-width 600px
     margin-left -40px 
     
-
 </style>

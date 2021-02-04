@@ -2,10 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contacto from '../views/Contacto.vue'
-import Posts from '../views/Posts.vue'
-import Details from '../views/Details.vue'
-import Usuarios from '../views/personas/Usuarios.vue'
-import Usuario from '../views/personas/Usuario.vue'
+import Posts from '../views/Blog/Posts.vue'
+import UnPost from '../views/Blog/UnPost.vue'
+import Usuarios from '../views/Usuarios/Usuarios.vue'
+import UnUsuario from '../views/Usuarios/UnUsuario.vue'
 
 const routes = [
   {
@@ -30,8 +30,8 @@ const routes = [
   },
   {
     path: '/posts/:id',
-    name: 'details',
-    component: Details,
+    name: 'un_post',
+    component: UnPost,
     props: true
   },
   {
@@ -40,18 +40,18 @@ const routes = [
     component: Usuarios
   },
   {
-    // El "name" identifica al componente "Usuarios"
-    // que es importado del archivo Usuarios.vue
+    // El "name" identifica al componente "UnUsuario"
+    // que es importado del archivo UnUsuario.vue
 
-    path: '/usuarios/:num',
-    name: 'nombre', // El name le indica al router qué componente tiene que linkear.
-    component: Usuario,
+    path: '/usuarios/:id',
+    name: 'un_usuario', // El name le indica al router qué componente tiene que linkear.
+    component: UnUsuario,
     props: true 
     // Al hacer que este componente
     // acepte props no es necesario usar la función
     // data() en el componente.
     // Pero el path tiene que tener el mismo nombre que el prop,
-    // en este caso ":num".
+    // en este caso ":id".
   }
 
 

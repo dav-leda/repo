@@ -16,10 +16,9 @@ export default {
      
     props: ['posts'],
     components: { SinglePost },
-
-  
 }
 </script>
+
 
 <style lang="stylus">
 

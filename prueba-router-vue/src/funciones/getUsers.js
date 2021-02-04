@@ -1,25 +1,25 @@
 import { ref } from 'vue'
 
-const getPosts = (id) => {
+const getUsers = (id) => {
 
-    const url = 'https://jsonplaceholder.typicode.com/posts/';
-    const posts = id ? ref(null) : ref([]);
+    const url = 'https://jsonplaceholder.typicode.com/users/';
+    const users = id ? ref(null) : ref([]);
     
     const load = async () => {
 
         try {   
             if (id) {
                 let data = await fetch(url + id);
-                posts.value = await data.json()
+                users.value = await data.json()
             }else{
                 let data = await fetch(url);
-                posts.value = await data.json()
+                users.value = await data.json()
             }      
         }
         catch (error) { console.log ( error.message ) }
     }
 
-    return { posts, load }
+    return { users, load }
 }
 
-export default getPosts
+export default getUsers
